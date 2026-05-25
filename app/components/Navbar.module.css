@@ -1,0 +1,48 @@
+@reference "../globals.css";
+
+.header {
+  @apply sticky top-0 z-20 w-full border-b border-[#f4edf7] bg-[#fff9ff] shadow-[0_10px_28px_rgba(90,65,120,0.06)];
+}
+
+.nav {
+  @apply mx-auto flex min-h-[82px] w-full max-w-[1260px] items-center justify-between gap-6 px-6 sm:px-8 lg:px-12;
+}
+
+.logo {
+  @apply shrink-0 text-2xl font-extrabold uppercase leading-none tracking-normal text-[#6644de] transition-colors hover:text-[#5530d8];
+}
+
+.links {
+  @apply absolute left-1/2 hidden -translate-x-1/2 items-center gap-10 text-[15px] font-semibold text-[#4f4859] md:flex;
+}
+
+.link,
+.activeLink,
+.loginLink,
+.trialButton {
+  @apply transition-colors;
+}
+
+.link {
+  @apply hover:text-[#6042e6];
+}
+
+.activeLink {
+  @apply relative text-[#6042e6];
+}
+
+.activeLink::after {
+  @apply absolute -bottom-3 left-0 h-0.5 w-full rounded-full bg-[#6042e6] content-[''];
+}
+
+.actions {
+  @apply flex shrink-0 items-center gap-4 sm:gap-7;
+}
+
+.loginLink {
+  @apply hidden text-[15px] font-semibold text-[#4f4859] hover:text-[#6042e6] sm:inline-flex;
+}
+
+.trialButton {
+  @apply inline-flex min-h-11 items-center justify-center rounded-full bg-gradient-to-r from-[#6a3fe2] to-[#2f6be9] px-5 text-[15px] font-bold text-white shadow-[0_10px_22px_rgba(75,88,224,0.22)] hover:from-[#5b34d4] hover:to-[#255edc] sm:px-7;
+}

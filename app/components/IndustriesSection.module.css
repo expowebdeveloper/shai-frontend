@@ -1,0 +1,65 @@
+@reference "../globals.css";
+
+.section {
+  @apply w-full bg-[#fff9ff] px-5 py-16;
+}
+
+.inner {
+  @apply mx-auto w-full max-w-[1120px];
+}
+
+.header {
+  @apply flex flex-col gap-8 md:flex-row md:items-end md:justify-between;
+}
+
+.copy {
+  @apply max-w-[500px];
+}
+
+.title {
+  @apply text-[27px] font-extrabold leading-[1.22] text-[#1d1a26] sm:text-[32px];
+}
+
+.title span {
+  @apply block;
+}
+
+.description {
+  @apply mt-6 max-w-[470px] text-[13px] font-medium leading-6 text-[#625b6a];
+}
+
+.link {
+  @apply inline-flex w-fit items-center gap-2 text-[13px] font-extrabold text-[#7142e8] transition-colors hover:text-[#2f6be9];
+}
+
+.arrow {
+  @apply relative h-3 w-4;
+}
+
+.arrow::before {
+  @apply absolute left-0 top-1/2 h-0.5 w-4 -translate-y-1/2 rounded-full bg-current content-[''];
+}
+
+.arrow::after {
+  @apply absolute right-0 top-1/2 h-2 w-2 -translate-y-1/2 rotate-45 border-r-2 border-t-2 border-current content-[''];
+}
+
+.grid {
+  @apply mt-12 grid gap-6 sm:grid-cols-2 lg:grid-cols-4;
+}
+
+.card {
+  @apply min-h-[198px] rounded-xl bg-white px-8 py-8 shadow-[0_18px_42px_rgba(77,57,108,0.09)];
+}
+
+.icon {
+  @apply h-[42px] w-[42px] object-contain;
+}
+
+.cardTitle {
+  @apply mt-8 text-xl font-extrabold leading-tight text-[#24212c];
+}
+
+.cardText {
+  @apply mt-4 max-w-[220px] text-[13px] font-medium leading-5 text-[#665f70];
+}

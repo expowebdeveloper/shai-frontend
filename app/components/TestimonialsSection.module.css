@@ -1,0 +1,45 @@
+@reference "../globals.css";
+
+.section {
+  @apply w-full bg-[#fff9ff] px-5 py-12;
+}
+
+.inner {
+  @apply mx-auto w-full max-w-[1220px] border-y border-dashed border-[#2e9aff] py-1;
+}
+
+.title {
+  @apply text-center text-[28px] font-extrabold leading-tight text-[#1f1b29] sm:text-[32px];
+}
+
+.grid {
+  @apply mt-12 grid gap-8 lg:grid-cols-3;
+}
+
+.card {
+  @apply flex min-h-[250px] flex-col rounded-xl border border-[#ebe2f7] bg-white px-8 py-8 shadow-[0_18px_45px_rgba(70,54,100,0.08)];
+}
+
+.stars {
+  @apply text-[22px] leading-none tracking-[0.08em] text-[#a66500];
+}
+
+.quote {
+  @apply mt-8 text-[15px] font-medium leading-6 text-[#282333];
+}
+
+.author {
+  @apply mt-auto flex items-center gap-4 pt-8;
+}
+
+.avatar {
+  @apply h-12 w-12 rounded-full object-cover;
+}
+
+.name {
+  @apply text-[13px] font-extrabold leading-tight text-[#211d2a];
+}
+
+.role {
+  @apply mt-1 text-[11px] font-medium leading-tight text-[#6f6878];
+}

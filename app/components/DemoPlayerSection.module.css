@@ -1,0 +1,37 @@
+@reference "../globals.css";
+
+.section {
+  @apply w-full border-y border-dashed border-[#2e9aff] bg-[#f7ecff] px-5 py-16;
+}
+
+.inner {
+  @apply mx-auto flex w-full max-w-[980px] flex-col items-center;
+}
+
+.playerFrame {
+  @apply w-full overflow-hidden rounded-2xl border-[10px] border-white bg-[#111925] shadow-[0_22px_52px_rgba(39,29,62,0.18)];
+}
+
+.image {
+  @apply block h-auto w-full;
+}
+
+.stats {
+  @apply mt-9 flex flex-wrap items-center justify-center gap-y-4 text-center;
+}
+
+.stat {
+  @apply px-10;
+}
+
+.stat:not(:last-child) {
+  @apply border-r border-[#d9cdee];
+}
+
+.stat strong {
+  @apply block text-[20px] font-extrabold leading-none text-[#6d42e2];
+}
+
+.stat span {
+  @apply mt-2 block text-[10px] font-semibold leading-none text-[#4d4659];
+}

@@ -1,0 +1,61 @@
+@reference "../globals.css";
+
+.footer {
+  @apply w-full border-4 border-[#1496ff] bg-[#fff9ff] px-5 py-10;
+}
+
+.inner {
+  @apply mx-auto w-full max-w-[1000px];
+}
+
+.top {
+  @apply grid gap-8 border border-dashed border-[#2e9aff] px-8 py-2 sm:grid-cols-2 lg:grid-cols-[1.3fr_1fr_1fr_1fr];
+}
+
+.brand {
+  @apply max-w-[230px];
+}
+
+.logo {
+  @apply text-xl font-extrabold leading-none text-[#6644de] transition-colors hover:text-[#5530d8];
+}
+
+.description {
+  @apply mt-8 text-[12px] font-medium leading-5 text-[#4d4659];
+}
+
+.column {
+  @apply min-w-0;
+}
+
+.columnTitle {
+  @apply text-[12px] font-extrabold leading-none text-[#201c28];
+}
+
+.links {
+  @apply mt-8 space-y-6 text-[12px] font-medium leading-none text-[#3f384b];
+}
+
+.links a {
+  @apply transition-colors hover:text-[#6644de];
+}
+
+.bottom {
+  @apply mt-8 flex items-center justify-between border border-dashed border-[#2e9aff] px-8 py-4;
+}
+
+.copyright {
+  @apply text-[11px] font-medium text-[#5f5868];
+}
+
+.socials {
+  @apply flex items-center gap-4 text-[#201c28];
+}
+
+.socials a {
+  @apply inline-flex h-6 w-6 items-center justify-center transition-colors hover:text-[#6644de];
+}
+
+.icon {
+  @apply h-5 w-5 fill-none stroke-current stroke-2;
+}

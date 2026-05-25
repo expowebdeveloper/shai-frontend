@@ -1,0 +1,54 @@
+@reference "../globals.css";
+
+.section {
+  @apply w-full bg-[#fff9ff] px-5 py-12;
+}
+
+.inner {
+  @apply mx-auto grid w-full max-w-[1120px] items-center gap-10 md:grid-cols-[0.9fr_1.1fr];
+}
+
+.content {
+  @apply max-w-[540px];
+}
+
+.title {
+  @apply text-[28px] font-extrabold leading-[1.18] text-[#1b1824] sm:text-[32px];
+}
+
+.title span {
+  @apply block bg-gradient-to-r from-[#6b43e2] to-[#2f6be9] bg-clip-text text-transparent;
+}
+
+.description {
+  @apply mt-7 max-w-[520px] text-[13px] font-medium leading-6 text-[#5f5868];
+}
+
+.chips {
+  @apply mt-8 flex flex-wrap gap-4;
+}
+
+.chip {
+  @apply inline-flex min-h-8 items-center justify-center rounded-full bg-white px-4 text-[13px] font-medium shadow-[0_8px_20px_rgba(83,62,116,0.08)];
+}
+
+.chip:nth-child(1),
+.chip:nth-child(2) {
+  @apply text-[#5d3de0];
+}
+
+.chip:nth-child(3) {
+  @apply text-[#9b650c];
+}
+
+.chip:nth-child(4) {
+  @apply text-[#6b43e2];
+}
+
+.visual {
+  @apply flex justify-center md:justify-end;
+}
+
+.image {
+  @apply h-auto w-full max-w-[560px];
+}

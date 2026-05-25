@@ -1,0 +1,45 @@
+@reference "../globals.css";
+
+.section {
+  @apply w-full bg-white px-5 py-14;
+}
+
+.inner {
+  @apply mx-auto w-full max-w-[1120px] border border-dashed border-[#2e9aff] px-6 py-2 sm:px-10;
+}
+
+.header {
+  @apply mx-auto max-w-[720px] text-center;
+}
+
+.title {
+  @apply text-[26px] font-bold leading-tight text-[#1c1a24] sm:text-[30px];
+}
+
+.subtitle {
+  @apply mt-4 text-[13px] font-medium leading-6 text-[#686171];
+}
+
+.steps {
+  @apply mt-10 grid gap-7 lg:grid-cols-3;
+}
+
+.card {
+  @apply relative flex min-h-[216px] flex-col items-center justify-center rounded-sm bg-white px-8 py-9 text-center shadow-[0_18px_52px_rgba(49,42,72,0.08)];
+}
+
+.card:not(:last-child)::after {
+  @apply pointer-events-none absolute left-full top-1/2 hidden h-px w-7 bg-[#e4deec] content-[''] lg:block;
+}
+
+.icon {
+  @apply flex h-16 w-16 items-center justify-center;
+}
+
+.cardTitle {
+  @apply mt-7 text-xl font-bold leading-tight text-[#211f2a];
+}
+
+.cardText {
+  @apply mt-4 max-w-[280px] text-[13px] font-medium leading-5 text-[#696272];
+}
