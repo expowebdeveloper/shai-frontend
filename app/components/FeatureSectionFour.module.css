@@ -1,0 +1,118 @@
+@reference "../globals.css";
+
+.section {
+  @apply w-full bg-[#1c1823] px-5 py-20 sm:py-24;
+}
+
+.inner {
+  @apply mx-auto grid w-full max-w-[1180px] items-center gap-12 lg:grid-cols-[0.95fr_1.05fr] lg:gap-16;
+}
+
+.content {
+  @apply text-white;
+}
+
+.title {
+  @apply max-w-[520px] text-[36px] font-extrabold leading-[1.12] tracking-normal sm:text-[44px];
+}
+
+.accent {
+  @apply text-[#dac8ff];
+}
+
+.copy {
+  @apply mt-7 max-w-[470px] text-[15px] font-medium leading-8 tracking-normal text-[#b9b1c4];
+}
+
+.stats {
+  @apply mt-16 grid max-w-[500px] gap-5 sm:grid-cols-2;
+}
+
+.statCard {
+  @apply rounded-xl border border-white/8 bg-white/5 px-7 py-6 shadow-[inset_0_1px_0_rgba(255,255,255,0.05)];
+}
+
+.statValue {
+  @apply block text-[38px] font-extrabold leading-none tracking-normal text-[#c9b5ff];
+}
+
+.statLabel {
+  @apply mt-2 block text-[10px] font-extrabold uppercase leading-none tracking-normal text-[#aaa1b6];
+}
+
+.visual {
+  @apply relative min-h-[365px] overflow-hidden rounded-xl bg-[#090d16] shadow-[0_22px_60px_rgba(0,0,0,0.24)];
+}
+
+.visual::before {
+  @apply absolute inset-0 content-[''];
+  background:
+    radial-gradient(
+      circle at 50% 38%,
+      rgba(64, 137, 221, 0.32) 0 9%,
+      transparent 28%
+    ),
+    radial-gradient(
+      circle at 50% 45%,
+      rgba(77, 121, 183, 0.32) 0 32%,
+      transparent 33%
+    ),
+    repeating-radial-gradient(
+      circle at 50% 46%,
+      transparent 0 30px,
+      rgba(115, 170, 255, 0.18) 31px 32px
+    ),
+    linear-gradient(145deg, #05070d 0%, #111827 52%, #060910 100%);
+}
+
+.visual::after {
+  @apply absolute left-1/2 top-1/2 h-[112%] w-[88%] -translate-x-1/2 -translate-y-1/2 rounded-full content-[''];
+  background:
+    linear-gradient(
+      90deg,
+      transparent 0 44%,
+      rgba(134, 195, 255, 0.36) 45% 46%,
+      transparent 47% 100%
+    ),
+    linear-gradient(
+      0deg,
+      transparent 0 47%,
+      rgba(134, 195, 255, 0.34) 48% 49%,
+      transparent 50% 100%
+    ),
+    repeating-conic-gradient(
+      from 18deg,
+      rgba(89, 154, 225, 0.55) 0deg 2deg,
+      transparent 2deg 7deg
+    ),
+    radial-gradient(circle, rgba(34, 83, 135, 0.34) 0 54%, transparent 55%);
+  filter: blur(0.2px);
+  opacity: 0.8;
+  mask-image: radial-gradient(circle, #000 0 55%, transparent 68%);
+}
+
+.syncCard {
+  @apply absolute left-1/2 top-1/2 z-10 flex w-[270px] -translate-x-1/2 -translate-y-1/2 flex-col items-center rounded-2xl bg-[#27303d]/92 px-8 py-8 text-center shadow-[0_18px_48px_rgba(0,0,0,0.32)] backdrop-blur-md;
+}
+
+.syncIcon {
+  @apply grid h-16 w-16 place-items-center rounded-xl bg-[#7a42e8] text-[26px] font-extrabold leading-none text-white shadow-[0_12px_26px_rgba(122,66,232,0.32)];
+}
+
+.syncTitle {
+  @apply mt-5 text-[21px] font-extrabold leading-tight tracking-normal text-white;
+}
+
+.syncText {
+  @apply mt-3 max-w-[190px] text-[10px] font-semibold leading-4 tracking-normal text-white/75;
+}
+
+@media (max-width: 640px) {
+  .visual {
+    @apply min-h-[320px];
+  }
+
+  .syncCard {
+    @apply w-[230px] px-6 py-7;
+  }
+}

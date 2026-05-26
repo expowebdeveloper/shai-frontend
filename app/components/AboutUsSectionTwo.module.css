@@ -1,0 +1,45 @@
+@reference "../globals.css";
+
+.section {
+  @apply w-full bg-[#fff7ff] px-5 py-20 sm:py-24;
+}
+
+.inner {
+  @apply mx-auto grid w-full max-w-[1180px] items-center gap-12 lg:grid-cols-[0.95fr_1.05fr] lg:gap-16;
+}
+
+.imageFrame {
+  @apply overflow-hidden rounded-2xl bg-white p-2 shadow-[0_18px_42px_rgba(50,38,74,0.12)];
+}
+
+.image {
+  @apply block aspect-square h-auto w-full rounded-xl object-cover;
+}
+
+.card {
+  @apply rounded-3xl bg-white/82 px-8 py-10 shadow-[0_18px_42px_rgba(50,38,74,0.12)] sm:px-12 sm:py-14;
+}
+
+.eyebrow {
+  @apply text-[13px] font-extrabold uppercase leading-none tracking-[0.32em] text-[#7040dc];
+}
+
+.title {
+  @apply mt-8 max-w-[560px] text-[30px] font-extrabold leading-[1.16] tracking-normal text-[#211b2a] sm:text-[36px];
+}
+
+.copy {
+  @apply mt-7 max-w-[570px] space-y-6 text-[15px] font-medium leading-8 tracking-normal text-[#625b6c];
+}
+
+.stats {
+  @apply mt-14 grid gap-10 sm:grid-cols-2;
+}
+
+.statValue {
+  @apply block text-[34px] font-extrabold leading-none tracking-normal text-[#7040dc];
+}
+
+.statLabel {
+  @apply mt-2 block text-[11px] font-extrabold uppercase leading-none tracking-normal text-[#4e4658];
+}

@@ -1,0 +1,80 @@
+@reference "../globals.css";
+
+.section {
+  @apply w-full bg-[#fff8ff] px-5 pb-16 sm:pb-20;
+}
+
+.inner {
+  @apply mx-auto flex w-full max-w-[1060px] flex-col gap-6;
+}
+
+/* ── Map card ── */
+.mapCard {
+  @apply relative w-full overflow-hidden rounded-2xl shadow-[0_12px_40px_rgba(58,44,82,0.12)];
+  aspect-ratio: 1198 / 594;
+}
+
+.mapImage {
+  @apply h-full w-full object-cover;
+}
+
+/* Gradient overlay so edges blend into the card background */
+.mapOverlay {
+  @apply pointer-events-none absolute inset-0;
+  background: linear-gradient(
+    to bottom,
+    rgba(40, 40, 70, 0.08) 0%,
+    rgba(40, 40, 70, 0.18) 100%
+  );
+}
+
+/* Centre pill */
+.mapBadge {
+  @apply absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 rounded-xl bg-[#6236ce] px-8 py-4 text-center shadow-[0_12px_32px_rgba(80,49,170,0.38)];
+}
+
+.mapBadgeTitle {
+  @apply text-[20px] font-extrabold text-white sm:text-[22px];
+}
+
+.mapBadgeText {
+  @apply mt-1 text-[12px] font-medium text-white/80;
+}
+
+/* Dot marker */
+.mapDot {
+  @apply absolute h-3 w-3 rounded-full bg-white shadow-[0_0_0_3px_rgba(98,54,206,0.5)];
+}
+
+/* ── Quick-help CTA ── */
+.ctaCard {
+  @apply flex w-full items-center justify-between gap-4 rounded-2xl bg-white px-6 py-5 shadow-[0_8px_28px_rgba(58,44,82,0.08)] sm:flex-row;
+}
+
+.ctaLeft {
+  @apply flex items-center gap-4;
+}
+
+.ctaIcon {
+  @apply flex h-11 w-11 shrink-0 items-center justify-center rounded-full bg-[#fff3e0];
+}
+
+.ctaTextGroup {
+  @apply flex flex-col;
+}
+
+.ctaTitle {
+  @apply text-[14px] font-extrabold text-[#211b2a];
+}
+
+.ctaSubtitle {
+  @apply text-[12px] font-medium text-[#625b6c];
+}
+
+.ctaLink {
+  @apply inline-flex shrink-0 items-center gap-1.5 text-[13px] font-extrabold text-[#7040dc] transition-all hover:gap-2.5;
+}
+
+.ctaArrow {
+  @apply transition-transform group-hover:translate-x-1;
+}

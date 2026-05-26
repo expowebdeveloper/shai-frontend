@@ -1,0 +1,116 @@
+@reference "../globals.css";
+
+.section {
+  @apply w-full bg-[radial-gradient(circle_at_50%_0%,rgba(255,255,255,0.78)_0%,rgba(255,255,255,0)_34%),linear-gradient(120deg,#fff8ff_0%,#f1e6ff_50%,#eaf1ff_100%)] px-5 pb-20 pt-16 sm:pb-24 sm:pt-20;
+}
+
+.inner {
+  @apply mx-auto flex w-full max-w-[1060px] flex-col items-center;
+}
+
+/* ── Badge ── */
+.badge {
+  @apply rounded-full bg-white/70 px-3 py-1 text-[10px] font-extrabold uppercase leading-none tracking-normal text-[#7643e8] shadow-[0_8px_20px_rgba(84,58,140,0.08)];
+}
+
+/* ── Hero text ── */
+.title {
+  @apply mt-5 text-[38px] font-extrabold leading-[1.1] tracking-normal text-[#211b2a] sm:text-[52px];
+}
+
+.description {
+  @apply mt-4 max-w-[520px] text-center text-[14px] font-medium leading-7 tracking-normal text-[#625b6c];
+}
+
+/* ── Two-column card grid ── */
+.grid {
+  @apply mt-14 grid w-full gap-6 lg:grid-cols-2;
+}
+
+/* ── Form card ── */
+.formCard {
+  @apply rounded-2xl bg-white p-8 shadow-[0_8px_32px_rgba(58,44,82,0.08)];
+}
+
+.fieldGroup {
+  @apply grid gap-4 sm:grid-cols-2;
+}
+
+.field {
+  @apply flex flex-col gap-1;
+}
+
+.fieldFull {
+  @apply col-span-2 flex flex-col gap-1;
+}
+
+.label {
+  @apply text-[11px] font-semibold tracking-normal text-[#4a4155];
+}
+
+.input {
+  @apply w-full rounded-md border border-[#e0d8ef] bg-[#faf8ff] px-4 py-3 text-[13px] text-[#211b2a] outline-none transition-all placeholder:text-[#b0a8c4] focus:border-[#7040dc] focus:ring-2 focus:ring-[#7040dc]/15;
+}
+
+.textarea {
+  @apply h-[110px] resize-none;
+}
+
+.submitButton {
+  @apply mt-6 w-full rounded-md bg-[#7040dc] py-3.5 text-[13px] font-extrabold tracking-normal text-white shadow-[0_14px_28px_rgba(112,64,220,0.22)] transition-all hover:bg-[#6235cf] hover:shadow-[0_18px_36px_rgba(112,64,220,0.3)];
+}
+
+/* ── Side cards column ── */
+.sideColumn {
+  @apply flex flex-col gap-6;
+}
+
+.card {
+  @apply rounded-2xl bg-white p-6 shadow-[0_8px_32px_rgba(58,44,82,0.08)];
+}
+
+.cardTitle {
+  @apply text-[15px] font-extrabold text-[#211b2a];
+}
+
+/* ── Office list ── */
+.officeList {
+  @apply mt-4 flex flex-col gap-4;
+}
+
+.officeItem {
+  @apply flex items-start gap-3;
+}
+
+.officeIcon {
+  @apply mt-0.5 flex h-7 w-7 shrink-0 items-center justify-center rounded-full bg-[#f0e9ff];
+}
+
+.officeDetails {
+  @apply flex flex-col;
+}
+
+.officeName {
+  @apply text-[13px] font-bold text-[#211b2a];
+}
+
+.officeAddress {
+  @apply text-[11px] font-medium leading-5 text-[#625b6c];
+}
+
+/* ── Direct contact card ── */
+.directContactLabel {
+  @apply text-[10px] font-extrabold uppercase tracking-widest text-[#7040dc];
+}
+
+.contactEmail {
+  @apply mt-3 text-[13px] font-semibold text-[#211b2a];
+}
+
+.socialRow {
+  @apply mt-4 flex gap-3;
+}
+
+.socialBtn {
+  @apply flex h-8 w-8 items-center justify-center rounded-full border border-[#e0d8ef] bg-[#faf8ff] text-[#7040dc] transition-all hover:border-[#7040dc] hover:bg-[#f0e9ff];
+}

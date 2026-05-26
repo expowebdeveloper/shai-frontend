@@ -1,6 +1,5 @@
 import CtaSection from "./components/CtaSection";
 import DemoPlayerSection from "./components/DemoPlayerSection";
-import Footer from "./components/Footer";
 import Hero from "./components/Hero";
 import IndustriesSection from "./components/IndustriesSection";
 import PersonalizationSection from "./components/PersonalizationSection";
@@ -23,8 +22,6 @@ export default function Home() {
         <PricingSection />
         <CtaSection />
       </main>
-
-      <Footer />
     </div>
   );
 }

@@ -1,0 +1,25 @@
+@reference "../globals.css";
+
+.section {
+  @apply w-full bg-[#fff7ff] px-5 pb-20 pt-8 sm:pb-24 sm:pt-12;
+}
+
+.inner {
+  @apply mx-auto flex w-full max-w-[980px] flex-col items-center text-center;
+}
+
+.title {
+  @apply text-[24px] font-extrabold leading-tight tracking-normal text-[#211b2a] sm:text-[28px];
+}
+
+.description {
+  @apply mt-4 max-w-[470px] text-[12px] font-medium leading-5 tracking-normal text-[#625b6c] sm:text-[13px];
+}
+
+.frame {
+  @apply mt-16 w-full overflow-hidden rounded-lg bg-white p-2 shadow-[0_18px_42px_rgba(46,36,70,0.14)];
+}
+
+.image {
+  @apply block h-auto w-full rounded-md;
+}

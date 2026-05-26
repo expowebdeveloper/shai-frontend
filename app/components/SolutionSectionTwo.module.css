@@ -1,0 +1,111 @@
+@reference "../globals.css";
+
+.section {
+  @apply w-full bg-[#fff7ff] px-3 pb-20 pt-4 sm:px-5 sm:pb-24;
+}
+
+.grid {
+  @apply mx-auto grid w-full max-w-[1260px] gap-7 lg:grid-cols-[2.08fr_1fr];
+}
+
+.featureCard,
+.compactCard {
+  @apply overflow-hidden rounded-lg border border-[#eee6f7] bg-white shadow-[0_16px_36px_rgba(48,36,72,0.08)];
+}
+
+.featureCard {
+  @apply grid lg:grid-cols-[minmax(270px,0.9fr)_minmax(360px,1.1fr)];
+}
+
+.content {
+  @apply flex min-h-[360px] flex-col p-8 sm:p-10;
+}
+
+.compactContent {
+  @apply flex min-h-[560px] flex-col p-8 sm:p-9;
+}
+
+.eyebrow {
+  @apply mb-4 flex items-center gap-1.5 text-[11px] font-extrabold uppercase leading-none tracking-normal text-[#7843e8];
+}
+
+.educationEyebrow {
+  @apply text-[#b46a05];
+}
+
+.icon {
+  @apply relative h-3.5 w-3.5 shrink-0 rounded-full border border-current;
+}
+
+.icon::after {
+  @apply absolute left-1/2 top-1/2 h-1.5 w-1.5 -translate-x-1/2 -translate-y-1/2 rounded-full bg-current content-[''];
+}
+
+.title {
+  @apply max-w-[330px] text-[28px] font-bold leading-[1.15] tracking-normal text-[#221b2c] sm:text-[32px];
+}
+
+.copy {
+  @apply mt-8 max-w-[330px] text-[14px] font-medium leading-7 tracking-normal text-[#5c5568];
+}
+
+.checkList {
+  @apply mt-auto space-y-4 pt-9;
+}
+
+.checkItem {
+  @apply flex max-w-[300px] items-start gap-2 text-[13px] font-medium leading-5 tracking-normal text-[#332d3d];
+}
+
+.checkIcon {
+  @apply mt-0.5 flex h-4 w-4 shrink-0 items-center justify-center rounded-full border border-[#7b42e8] text-[10px] font-black leading-none text-[#7b42e8];
+}
+
+.metricPanel {
+  @apply mt-10 flex min-h-[88px] items-center gap-5 rounded-md bg-[#fbf1ff] px-6 py-4;
+}
+
+.metricValue {
+  @apply text-[24px] font-extrabold leading-none tracking-normal text-[#7b42e8];
+}
+
+.metricText {
+  @apply max-w-[165px] text-[11px] font-bold leading-4 tracking-normal text-[#5d5667];
+}
+
+.imagePanel {
+  @apply relative min-h-[360px] bg-[#10232b] lg:min-h-full;
+}
+
+.featureImage,
+.compactImage {
+  @apply object-cover;
+}
+
+.compactImageWrap {
+  @apply relative mt-auto min-h-[190px] overflow-hidden rounded-md bg-[#142335];
+}
+
+.educationMetric {
+  @apply mt-7 flex items-center gap-5;
+}
+
+.educationMetricValue {
+  @apply text-[24px] font-extrabold leading-none tracking-normal text-[#b66a04];
+}
+
+.educationMetricText {
+  @apply max-w-[160px] text-[11px] font-bold leading-4 tracking-normal text-[#5d5667];
+}
+
+@media (max-width: 1023px) {
+  .content,
+  .compactContent {
+    @apply min-h-0;
+  }
+
+  .checkList,
+  .compactImageWrap {
+    @apply mt-10;
+  }
+}

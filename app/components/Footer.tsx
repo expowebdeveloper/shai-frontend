@@ -8,14 +8,12 @@ const footerColumns = [
     links: [
       { label: "Video Engine", href: "/product/video-engine" },
       { label: "Integrations", href: "/integrations" },
-      { label: "API Docs", href: "/docs/api" },
     ],
   },
   {
     title: "Company",
     links: [
-      { label: "About Us", href: "/about" },
-      { label: "Careers", href: "/careers" },
+      { label: "About Us", href: "/about-us" },
       { label: "Privacy Policy", href: "/privacy" },
     ],
   },
@@ -23,8 +21,7 @@ const footerColumns = [
     title: "Support",
     links: [
       { label: "Help Center", href: "/help" },
-      { label: "Community", href: "/community" },
-      { label: "Contact", href: "/contact" },
+      { label: "Contact", href: "/contact-us" },
     ],
   },
 ];
@@ -83,9 +80,7 @@ export default function Footer() {
         </div>
 
         <div className={styles.bottom}>
-          <p className={styles.copyright}>
-            © 2024 AIVideoPro. All rights reserved.
-          </p>
+          <p className={styles.copyright}>© 2026 Logo. All rights reserved.</p>
           <div className={styles.socials} aria-label="Footer actions">
             <Link href="/language" aria-label="Language settings">
               <GlobeIcon />

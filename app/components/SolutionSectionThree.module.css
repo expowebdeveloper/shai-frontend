@@ -1,0 +1,53 @@
+@reference "../globals.css";
+
+.section {
+  @apply w-full bg-[#fff7ff] px-3 pb-20 sm:px-5 sm:pb-24;
+}
+
+.card {
+  @apply mx-auto grid w-full max-w-[1060px] overflow-hidden rounded-lg border border-[#eee6f7] bg-white shadow-[0_16px_36px_rgba(48,36,72,0.08)] lg:grid-cols-[1fr_1fr];
+}
+
+.imagePanel {
+  @apply relative min-h-[320px] bg-[#151021] sm:min-h-[430px] lg:min-h-[450px];
+}
+
+.image {
+  @apply object-cover;
+}
+
+.content {
+  @apply flex min-h-[360px] flex-col justify-center p-8 sm:p-11 lg:p-16;
+}
+
+.eyebrow {
+  @apply mb-4 flex items-center gap-1.5 text-[11px] font-extrabold uppercase leading-none tracking-normal text-[#2678e8];
+}
+
+.icon {
+  @apply grid h-3.5 w-3.5 shrink-0 place-items-center rounded-[3px] border border-current text-[8px] font-black leading-none;
+}
+
+.title {
+  @apply max-w-[340px] text-[28px] font-bold leading-[1.12] tracking-normal text-[#221b2c] sm:text-[32px];
+}
+
+.copy {
+  @apply mt-7 max-w-[360px] text-[14px] font-medium leading-7 tracking-normal text-[#5c5568];
+}
+
+.metrics {
+  @apply mt-10 grid max-w-[390px] grid-cols-1 gap-4 sm:grid-cols-2;
+}
+
+.metricCard {
+  @apply rounded-md bg-[#f1f4ff] px-7 py-5;
+}
+
+.metricValue {
+  @apply block text-[22px] font-extrabold leading-none tracking-normal text-[#1a71e8];
+}
+
+.metricLabel {
+  @apply mt-2 block text-[10px] font-extrabold leading-4 tracking-normal text-[#2c3040];
+}

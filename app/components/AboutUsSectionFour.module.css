@@ -1,0 +1,29 @@
+@reference "../globals.css";
+
+.section {
+  @apply w-full bg-[#fff7ff] px-5 py-16 sm:py-20;
+}
+
+.inner {
+  @apply mx-auto grid w-full max-w-[1180px] gap-12 text-center md:grid-cols-3;
+}
+
+.value {
+  @apply block text-[42px] font-extrabold leading-none tracking-normal sm:text-[50px];
+}
+
+.purple {
+  @apply text-[#7040dc];
+}
+
+.blue {
+  @apply text-[#006ce2];
+}
+
+.amber {
+  @apply text-[#8a5600];
+}
+
+.label {
+  @apply mt-5 block text-[12px] font-extrabold uppercase leading-none tracking-[0.42em] text-[#4e4658];
+}

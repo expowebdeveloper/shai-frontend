@@ -1,0 +1,48 @@
+@reference "../globals.css";
+
+.section {
+  @apply w-full bg-[#fff7ff] px-5 pb-20 pt-4 sm:pb-24;
+}
+
+.inner {
+  @apply mx-auto w-full max-w-[900px];
+}
+
+.title {
+  @apply text-center text-[24px] font-extrabold leading-tight tracking-normal text-[#211b2a] sm:text-[28px];
+}
+
+.tableWrap {
+  @apply mt-14 overflow-x-auto;
+}
+
+.table {
+  @apply w-full min-w-[720px] border-collapse text-left text-[12px] font-medium tracking-normal text-[#2f2938];
+}
+
+.table th,
+.table td {
+  @apply border-b border-[#ebe3f0] px-6 py-4;
+}
+
+.table th {
+  @apply text-[11px] font-medium text-[#6a6273];
+}
+
+.table th:not(:first-child),
+.table td:not(:first-child) {
+  @apply text-center;
+}
+
+.proHeader,
+.proCell {
+  @apply bg-[#f3e9ff];
+}
+
+.proHeader {
+  color: #7445e8;
+}
+
+.strong {
+  @apply font-extrabold text-[#211b2a];
+}

@@ -1,27 +1,27 @@
 @reference "../globals.css";
 
 .footer {
-  @apply w-full border-4 border-[#1496ff] bg-[#fff9ff] px-5 py-10;
+  @apply w-full border-t border-[#ddd4e7] bg-white px-5 py-12;
 }
 
 .inner {
-  @apply mx-auto w-full max-w-[1000px];
+  @apply mx-auto w-full max-w-[1060px];
 }
 
 .top {
-  @apply grid gap-8 border border-dashed border-[#2e9aff] px-8 py-2 sm:grid-cols-2 lg:grid-cols-[1.3fr_1fr_1fr_1fr];
+  @apply grid gap-10 pb-12 sm:grid-cols-2 lg:grid-cols-[1.5fr_1fr_1fr_1fr];
 }
 
 .brand {
-  @apply max-w-[230px];
+  @apply max-w-[220px];
 }
 
 .logo {
-  @apply text-xl font-extrabold leading-none text-[#6644de] transition-colors hover:text-[#5530d8];
+  @apply text-[24px] font-extrabold uppercase leading-none tracking-normal text-[#6644de] transition-colors hover:text-[#5530d8];
 }
 
 .description {
-  @apply mt-8 text-[12px] font-medium leading-5 text-[#4d4659];
+  @apply mt-8 text-[14px] font-medium leading-6 tracking-normal text-[#4d4659];
 }
 
 .column {
@@ -29,11 +29,11 @@
 }
 
 .columnTitle {
-  @apply text-[12px] font-extrabold leading-none text-[#201c28];
+  @apply text-[14px] font-extrabold leading-none tracking-normal text-[#201c28];
 }
 
 .links {
-  @apply mt-8 space-y-6 text-[12px] font-medium leading-none text-[#3f384b];
+  @apply mt-8 space-y-7 text-[14px] font-medium leading-none tracking-normal text-[#3f384b];
 }
 
 .links a {
@@ -41,11 +41,11 @@
 }
 
 .bottom {
-  @apply mt-8 flex items-center justify-between border border-dashed border-[#2e9aff] px-8 py-4;
+  @apply flex items-center justify-between border-t border-[#ddd4e7] pt-10;
 }
 
 .copyright {
-  @apply text-[11px] font-medium text-[#5f5868];
+  @apply text-[12px] font-medium tracking-normal text-[#5f5868];
 }
 
 .socials {
@@ -53,9 +53,9 @@
 }
 
 .socials a {
-  @apply inline-flex h-6 w-6 items-center justify-center transition-colors hover:text-[#6644de];
+  @apply inline-flex h-7 w-7 items-center justify-center transition-colors hover:text-[#6644de];
 }
 
 .icon {
-  @apply h-5 w-5 fill-none stroke-current stroke-2;
+  @apply h-5 w-5 fill-none stroke-current stroke-[2.3];
 }

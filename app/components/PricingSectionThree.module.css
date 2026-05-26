@@ -1,0 +1,50 @@
+@reference "../globals.css";
+
+.section {
+  @apply w-full bg-[#fff7ff] px-5 pb-20 pt-2 sm:pb-24;
+}
+
+.inner {
+  @apply mx-auto w-full max-w-[760px];
+}
+
+.title {
+  @apply text-center text-[24px] font-extrabold leading-tight tracking-normal text-[#211b2a] sm:text-[28px];
+}
+
+.list {
+  @apply mt-10 space-y-4;
+}
+
+.item {
+  @apply overflow-hidden rounded-lg bg-white shadow-[0_12px_28px_rgba(55,43,83,0.08)];
+}
+
+.question {
+  @apply flex min-h-16 cursor-pointer list-none items-center justify-between gap-5 px-6 text-[13px] font-extrabold leading-5 tracking-normal text-[#211b2a] sm:px-7;
+}
+
+.question::-webkit-details-marker {
+  display: none;
+}
+
+.chevron {
+  @apply relative h-4 w-4 shrink-0 text-[#211b2a];
+}
+
+.chevron::before,
+.chevron::after {
+  @apply absolute left-1/2 top-1/2 h-0.5 w-2 -translate-x-1/2 -translate-y-1/2 rounded-full bg-current content-[''];
+}
+
+.chevron::after {
+  @apply rotate-90 transition-transform;
+}
+
+.item[open] .chevron::after {
+  @apply rotate-0;
+}
+
+.answer {
+  @apply px-6 pb-6 pt-0 text-[13px] font-medium leading-6 tracking-normal text-[#625b6c] sm:px-7;
+}

@@ -1,0 +1,95 @@
+@reference "../globals.css";
+
+.section {
+  @apply w-full bg-[#fff7ff] px-5 pb-20 pt-12 sm:pb-24 sm:pt-16;
+}
+
+.inner {
+  @apply mx-auto grid w-full max-w-[1080px] items-center gap-12 lg:grid-cols-[1fr_0.92fr] lg:gap-20;
+}
+
+.visualStack {
+  @apply relative min-h-[420px] sm:min-h-[470px];
+}
+
+.imageCard {
+  @apply absolute overflow-hidden rounded-lg bg-white p-4 shadow-[0_18px_42px_rgba(63,47,91,0.14)];
+}
+
+.primaryCard {
+  @apply left-0 top-0 w-[68%] max-w-[340px];
+}
+
+.secondaryCard {
+  @apply bottom-4 left-[24%] w-[70%] max-w-[360px];
+}
+
+.imageWrap {
+  @apply relative aspect-[1.42] w-full overflow-hidden rounded-md bg-[#eee5f4];
+}
+
+.image {
+  @apply object-cover;
+}
+
+.cardCaption {
+  @apply mt-4 text-[11px] font-extrabold leading-none tracking-normal text-[#7445e8];
+}
+
+.cardText {
+  @apply mt-1 text-[10px] font-semibold leading-4 tracking-normal text-[#6a6273];
+}
+
+.content {
+  @apply lg:pb-7;
+}
+
+.title {
+  @apply text-[26px] font-extrabold leading-tight tracking-normal text-[#211b2a] sm:text-[30px];
+}
+
+.copy {
+  @apply mt-6 max-w-[470px] text-[14px] font-medium leading-7 tracking-normal text-[#625b6c];
+}
+
+.features {
+  @apply mt-12 space-y-8;
+}
+
+.featureItem {
+  @apply flex max-w-[440px] items-start gap-4;
+}
+
+.featureIcon {
+  @apply grid h-8 w-8 shrink-0 place-items-center rounded-lg text-[13px] font-extrabold leading-none;
+}
+
+.purpleIcon {
+  @apply bg-[#eadfff] text-[#7445e8];
+}
+
+.blueIcon {
+  @apply bg-[#dcecff] text-[#2170e8];
+}
+
+.amberIcon {
+  @apply bg-[#ffe3b5] text-[#b56a05];
+}
+
+.featureTitle {
+  @apply text-[13px] font-extrabold leading-5 tracking-normal text-[#211b2a];
+}
+
+.featureText {
+  @apply mt-1 text-[11px] font-semibold leading-5 tracking-normal text-[#625b6c];
+}
+
+@media (max-width: 640px) {
+  .visualStack {
+    @apply min-h-0 space-y-5;
+  }
+
+  .imageCard {
+    @apply static w-full max-w-none;
+  }
+}

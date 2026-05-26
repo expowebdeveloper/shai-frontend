@@ -1,0 +1,42 @@
+@reference "../globals.css";
+
+.section {
+  @apply w-full overflow-hidden bg-[radial-gradient(circle_at_50%_0%,rgba(255,255,255,0.72)_0%,rgba(255,255,255,0)_34%),linear-gradient(120deg,#fff6ff_0%,#f0e3ff_43%,#dbe9ff_100%)] px-5 py-24 sm:py-28;
+}
+
+.inner {
+  @apply mx-auto flex max-w-[960px] flex-col items-center text-center;
+}
+
+.badge {
+  @apply rounded-full bg-[#eadfff] px-3 py-1 text-[10px] font-extrabold uppercase leading-none tracking-normal text-[#6d4ce7] shadow-[0_8px_18px_rgba(91,68,168,0.08)];
+}
+
+.title {
+  @apply mt-6 max-w-[760px] text-[34px] font-extrabold leading-[1.08] tracking-normal text-[#211a2a] sm:text-[42px] md:text-[48px];
+}
+
+.titleAccent {
+  @apply bg-gradient-to-r from-[#4f48e6] to-[#006cdd] bg-clip-text text-transparent;
+}
+
+.description {
+  @apply mt-6 max-w-[610px] text-[13px] font-medium leading-6 tracking-normal text-[#5f5870] sm:text-[14px];
+}
+
+.actions {
+  @apply mt-10 flex flex-col items-center justify-center gap-4 sm:flex-row;
+}
+
+.primaryButton,
+.secondaryButton {
+  @apply inline-flex min-h-12 min-w-[146px] items-center justify-center rounded-lg px-6 text-[13px] font-extrabold tracking-normal transition-all;
+}
+
+.primaryButton {
+  @apply bg-gradient-to-r from-[#6b42e2] to-[#006ce2] text-white shadow-[0_14px_26px_rgba(56,78,210,0.28)] hover:from-[#5d34da] hover:to-[#005fca];
+}
+
+.secondaryButton {
+  @apply bg-white text-[#6047e5] shadow-[0_12px_24px_rgba(71,57,112,0.12)] hover:text-[#006ce2] hover:shadow-[0_14px_28px_rgba(71,57,112,0.16)];
+}

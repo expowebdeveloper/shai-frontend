@@ -1,0 +1,118 @@
+@reference "../globals.css";
+
+.section {
+  @apply w-full bg-[#fff7ff] px-5 py-20 sm:py-24;
+}
+
+.inner {
+  @apply mx-auto w-full max-w-[1080px];
+}
+
+.title {
+  @apply text-center text-[24px] font-extrabold leading-tight tracking-normal text-[#211b2a] sm:text-[28px];
+}
+
+.titleAccent {
+  @apply text-[#006ce2];
+}
+
+.grid {
+  @apply mt-16 grid gap-6 lg:grid-cols-3;
+}
+
+.card {
+  @apply rounded-2xl bg-white/70 p-8 shadow-[0_16px_42px_rgba(60,45,92,0.06)];
+}
+
+.largeCard {
+  @apply lg:col-span-2;
+}
+
+.mediumCard {
+  @apply lg:row-span-1;
+}
+
+.smallCard {
+  @apply min-h-[170px];
+}
+
+.icon {
+  @apply grid h-10 w-10 place-items-center rounded-lg text-[16px] font-extrabold leading-none;
+}
+
+.purpleIcon {
+  @apply bg-[#eadfff] text-[#7445e8];
+}
+
+.blueIcon {
+  @apply bg-[#dcecff] text-[#2170e8];
+}
+
+.amberIcon {
+  @apply bg-[#ffe3c7] text-[#a86405];
+}
+
+.cardTitle {
+  @apply mt-7 text-[17px] font-extrabold leading-tight tracking-normal text-[#211b2a];
+}
+
+.smallCard .cardTitle {
+  @apply mt-6 text-[13px];
+}
+
+.cardText {
+  @apply mt-4 max-w-[440px] text-[13px] font-medium leading-6 tracking-normal text-[#625b6c];
+}
+
+.smallCard .cardText {
+  @apply mt-3 text-[10px] font-semibold leading-4;
+}
+
+.wavePanel {
+  @apply mt-8 flex min-h-[92px] items-center justify-center rounded-xl bg-[#eee3f8];
+}
+
+.wave {
+  @apply flex h-12 items-center gap-1.5;
+}
+
+.wave span {
+  @apply w-1.5 rounded-full bg-[#a26df2];
+}
+
+.wave span:nth-child(1),
+.wave span:nth-child(7) {
+  @apply h-5;
+}
+
+.wave span:nth-child(2),
+.wave span:nth-child(6) {
+  @apply h-8;
+}
+
+.wave span:nth-child(3),
+.wave span:nth-child(5) {
+  @apply h-11;
+}
+
+.wave span:nth-child(4) {
+  @apply h-12;
+}
+
+.chips {
+  @apply mt-8 flex flex-wrap gap-2;
+}
+
+.chip {
+  @apply rounded-full bg-[#e9eefb] px-3 py-1 text-[10px] font-extrabold leading-none tracking-normal text-[#5570a4];
+}
+
+@media (max-width: 1023px) {
+  .grid {
+    @apply md:grid-cols-2;
+  }
+
+  .largeCard {
+    @apply md:col-span-2;
+  }
+}
