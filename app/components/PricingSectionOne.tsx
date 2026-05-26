@@ -1,3 +1,6 @@
+"use client";
+
+import { useState } from "react";
 import Link from "next/link";
 
 import styles from "./PricingSectionOne.module.css";
@@ -5,7 +8,8 @@ import styles from "./PricingSectionOne.module.css";
 type PricingPlan = {
   name: string;
   badgeClassName: string;
-  price: string;
+  monthlyPrice: string;
+  annualPrice: string;
   suffix: string;
   description: string;
   features: string[];
@@ -19,7 +23,8 @@ const plans: PricingPlan[] = [
   {
     name: "Starter",
     badgeClassName: styles.starterBadge,
-    price: "$29",
+    monthlyPrice: "$29",
+    annualPrice: "$23",
     suffix: "/mo",
     description:
       "Perfect for individuals and hobbyists starting their journey.",
@@ -36,7 +41,8 @@ const plans: PricingPlan[] = [
   {
     name: "Pro",
     badgeClassName: styles.proBadge,
-    price: "$79",
+    monthlyPrice: "$79",
+    annualPrice: "$63",
     suffix: "/mo",
     description: "The ultimate toolkit for content creators and agencies.",
     features: [
@@ -54,7 +60,8 @@ const plans: PricingPlan[] = [
   {
     name: "Enterprise",
     badgeClassName: styles.enterpriseBadge,
-    price: "Custom",
+    monthlyPrice: "Custom",
+    annualPrice: "Custom",
     suffix: "",
     description: "Tailored solutions for large-scale production and security.",
     features: [
@@ -66,11 +73,13 @@ const plans: PricingPlan[] = [
     ],
     disabledFeatures: [],
     buttonLabel: "Contact Sales",
-    href: "/contact",
+    href: "/contact-us",
   },
 ];
 
 export default function PricingSectionOne() {
+  const [isAnnual, setIsAnnual] = useState(false);
+
   return (
     <section className={styles.section}>
       <div className={styles.inner}>
@@ -81,11 +90,39 @@ export default function PricingSectionOne() {
             power of generative AI. No hidden fees, cancel anytime.
           </p>
 
+          {/* ── Toggle row ── */}
           <div className={styles.billing} aria-label="Billing cadence">
-            <span>Monthly</span>
-            <span className={styles.switch} aria-hidden="true" />
-            <span>Annually</span>
-            <span className={styles.saveBadge}>Save 20%</span>
+            <span
+              className={
+                isAnnual ? styles.billingLabel : styles.billingLabelActive
+              }
+            >
+              Monthly
+            </span>
+
+            {/* Toggle button */}
+            <button
+              id="pricing-billing-toggle"
+              role="switch"
+              aria-checked={isAnnual}
+              aria-label="Switch between monthly and annual billing"
+              className={styles.toggleTrack}
+              onClick={() => setIsAnnual((v) => !v)}
+            >
+              <span
+                className={`${styles.toggleKnob} ${isAnnual ? styles.toggleKnobOn : ""}`}
+              />
+            </button>
+
+            <span
+              className={
+                isAnnual ? styles.billingLabelActive : styles.billingLabel
+              }
+            >
+              Annual
+            </span>
+
+            <span className={styles.saveBadge}>SAVE 20%</span>
           </div>
         </div>
 
@@ -94,6 +131,7 @@ export default function PricingSectionOne() {
             const cardClassName = plan.highlighted
               ? styles.featuredCard
               : styles.card;
+            const price = isAnnual ? plan.annualPrice : plan.monthlyPrice;
 
             return (
               <article key={plan.name} className={cardClassName}>
@@ -104,7 +142,7 @@ export default function PricingSectionOne() {
                 <p className={plan.badgeClassName}>{plan.name}</p>
 
                 <div className={styles.priceRow}>
-                  <span className={styles.price}>{plan.price}</span>
+                  <span className={styles.price}>{price}</span>
                   {plan.suffix ? (
                     <span className={styles.suffix}>{plan.suffix}</span>
                   ) : null}
@@ -115,7 +153,6 @@ export default function PricingSectionOne() {
                 <ul className={styles.features}>
                   {plan.features.map((feature) => {
                     const isDisabled = plan.disabledFeatures.includes(feature);
-
                     return (
                       <li
                         key={feature}

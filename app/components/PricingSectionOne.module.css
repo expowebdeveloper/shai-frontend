@@ -24,16 +24,32 @@
   @apply mt-7 flex items-center justify-center gap-3 text-[12px] font-bold leading-none tracking-normal text-[#41394d];
 }
 
-.switch {
-  @apply relative h-5 w-9 rounded-full bg-[#7a43e8] shadow-[0_6px_14px_rgba(122,67,232,0.18)];
+/* Label states */
+.billingLabel {
+  @apply text-[13px] font-semibold text-[#9b93a8] transition-colors;
 }
 
-.switch::after {
-  @apply absolute left-1 top-1 h-3 w-3 rounded-full bg-white content-[''];
+.billingLabelActive {
+  @apply text-[13px] font-bold text-[#41394d] transition-colors;
+}
+
+/* Toggle track */
+.toggleTrack {
+  @apply relative h-[28px] w-[52px] shrink-0 cursor-pointer rounded-full bg-[#e6daf7] outline-none transition-colors duration-300 focus-visible:ring-2 focus-visible:ring-[#7a43e8]/50;
+}
+
+/* Knob */
+.toggleKnob {
+  @apply absolute left-[3px] top-[3px] h-[22px] w-[22px] rounded-full bg-[#7a43e8] shadow-[0_4px_10px_rgba(122,67,232,0.35)] transition-transform duration-300;
+}
+
+/* Knob slid to the right when annual is active */
+.toggleKnobOn {
+  @apply translate-x-[24px];
 }
 
 .saveBadge {
-  @apply rounded-full bg-[#ede2ff] px-2.5 py-1 text-[9px] font-extrabold uppercase leading-none text-[#7445e8];
+  @apply rounded-full bg-[#7445e8] px-3 py-1.5 text-[9px] font-extrabold uppercase leading-none tracking-wide text-white;
 }
 
 .grid {

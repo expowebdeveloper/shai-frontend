@@ -1,6 +1,38 @@
+"use client";
+
+import { useForm, SubmitHandler } from "react-hook-form";
+
+import { ADDRESS_1, ADDRESS_2, CONTACT_EMAIL } from "../../lib/constants";
+
 import styles from "./ContactSectionOne.module.css";
 
+type ContactFormValues = {
+  name: string;
+  email: string;
+  company: string;
+  subject: string;
+  message: string;
+};
+
 export default function ContactSectionOne() {
+  const {
+    register,
+    handleSubmit,
+    reset,
+    formState: { errors, isSubmitting, isSubmitSuccessful },
+  } = useForm<ContactFormValues>({
+    defaultValues: {
+      subject: "General Inquiry",
+    },
+  });
+
+  const onSubmit: SubmitHandler<ContactFormValues> = async (data) => {
+    // TODO: replace with real API call
+    await new Promise((r) => setTimeout(r, 800));
+    console.log("Contact form submitted:", data);
+    reset();
+  };
+
   return (
     <section className={styles.section}>
       <div className={styles.inner}>
@@ -18,71 +50,141 @@ export default function ContactSectionOne() {
         <div className={styles.grid}>
           {/* ── Contact form card ── */}
           <div className={styles.formCard}>
-            <div className={styles.fieldGroup}>
-              <div className={styles.field}>
-                <label className={styles.label} htmlFor="contact-name">
-                  Name
-                </label>
-                <input
-                  id="contact-name"
-                  className={styles.input}
-                  type="text"
-                  placeholder="Jane Doe"
-                />
+            {isSubmitSuccessful && (
+              <p className={styles.successMessage}>
+                ✓ Message sent! We&apos;ll get back to you shortly.
+              </p>
+            )}
+
+            <form
+              id="contact-form"
+              noValidate
+              onSubmit={handleSubmit(onSubmit)}
+            >
+              <div className={styles.fieldGroup}>
+                {/* Name */}
+                <div className={styles.field}>
+                  <label className={styles.label} htmlFor="contact-name">
+                    Name
+                  </label>
+                  <input
+                    id="contact-name"
+                    type="text"
+                    placeholder="Jane Doe"
+                    className={`${styles.input} ${errors.name ? styles.inputError : ""}`}
+                    {...register("name", {
+                      required: "Name is required",
+                      minLength: { value: 2, message: "At least 2 characters" },
+                    })}
+                  />
+                  {errors.name && (
+                    <span className={styles.errorText}>
+                      {errors.name.message}
+                    </span>
+                  )}
+                </div>
+
+                {/* Work Email */}
+                <div className={styles.field}>
+                  <label className={styles.label} htmlFor="contact-email">
+                    Work Email
+                  </label>
+                  <input
+                    id="contact-email"
+                    type="email"
+                    placeholder="jane@company.com"
+                    className={`${styles.input} ${errors.email ? styles.inputError : ""}`}
+                    {...register("email", {
+                      required: "Email is required",
+                      pattern: {
+                        value: /^[^\s@]+@[^\s@]+\.[^\s@]+$/,
+                        message: "Enter a valid email",
+                      },
+                    })}
+                  />
+                  {errors.email && (
+                    <span className={styles.errorText}>
+                      {errors.email.message}
+                    </span>
+                  )}
+                </div>
+
+                {/* Company */}
+                <div className={styles.field}>
+                  <label className={styles.label} htmlFor="contact-company">
+                    Company
+                  </label>
+                  <input
+                    id="contact-company"
+                    type="text"
+                    placeholder="Acme Inc."
+                    className={`${styles.input} ${errors.company ? styles.inputError : ""}`}
+                    {...register("company", {
+                      required: "Company is required",
+                    })}
+                  />
+                  {errors.company && (
+                    <span className={styles.errorText}>
+                      {errors.company.message}
+                    </span>
+                  )}
+                </div>
+
+                {/* Subject */}
+                <div className={styles.field}>
+                  <label className={styles.label} htmlFor="contact-subject">
+                    Subject
+                  </label>
+                  <input
+                    id="contact-subject"
+                    type="text"
+                    placeholder="General Inquiry"
+                    className={`${styles.input} ${errors.subject ? styles.inputError : ""}`}
+                    {...register("subject", {
+                      required: "Subject is required",
+                    })}
+                  />
+                  {errors.subject && (
+                    <span className={styles.errorText}>
+                      {errors.subject.message}
+                    </span>
+                  )}
+                </div>
+
+                {/* Message */}
+                <div className={styles.fieldFull}>
+                  <label className={styles.label} htmlFor="contact-message">
+                    Message
+                  </label>
+                  <textarea
+                    id="contact-message"
+                    placeholder="How can we help you?"
+                    className={`${styles.input} ${styles.textarea} ${errors.message ? styles.inputError : ""}`}
+                    {...register("message", {
+                      required: "Message is required",
+                      minLength: {
+                        value: 10,
+                        message: "At least 10 characters",
+                      },
+                    })}
+                  />
+                  {errors.message && (
+                    <span className={styles.errorText}>
+                      {errors.message.message}
+                    </span>
+                  )}
+                </div>
               </div>
 
-              <div className={styles.field}>
-                <label className={styles.label} htmlFor="contact-email">
-                  Work Email
-                </label>
-                <input
-                  id="contact-email"
-                  className={styles.input}
-                  type="email"
-                  placeholder="jane@company.com"
-                />
-              </div>
-
-              <div className={styles.field}>
-                <label className={styles.label} htmlFor="contact-company">
-                  Company
-                </label>
-                <input
-                  id="contact-company"
-                  className={styles.input}
-                  type="text"
-                  placeholder="Acme Inc."
-                />
-              </div>
-
-              <div className={styles.field}>
-                <label className={styles.label} htmlFor="contact-subject">
-                  Subject
-                </label>
-                <input
-                  id="contact-subject"
-                  className={styles.input}
-                  type="text"
-                  placeholder="General Inquiry"
-                  defaultValue="General Inquiry"
-                />
-              </div>
-
-              <div className={`${styles.fieldFull}`}>
-                <label className={styles.label} htmlFor="contact-message">
-                  Message
-                </label>
-                <textarea
-                  id="contact-message"
-                  className={`${styles.input} ${styles.textarea}`}
-                  placeholder="How can we help you?"
-                />
-              </div>
-            </div>
-
-            <button id="contact-send-button" className={styles.submitButton}>
-              Send Message
-            </button>
+              <button
+                id="contact-send-button"
+                type="submit"
+                disabled={isSubmitting}
+                className={styles.submitButton}
+              >
+                {isSubmitting ? "Sending…" : "Send Message"}
+              </button>
+            </form>
           </div>
 
           {/* ── Side column ── */}
@@ -108,13 +210,11 @@ export default function ContactSectionOne() {
                     </svg>
                   </span>
                   <div className={styles.officeDetails}>
-                    <span className={styles.officeName}>
-                      San Francisco (HQ)
-                    </span>
+                    <span className={styles.officeName}>{ADDRESS_1.label}</span>
                     <span className={styles.officeAddress}>
-                      123 AI Plaza, Market St.
+                      {ADDRESS_1.line1}
                       <br />
-                      San Francisco, CA 94103
+                      {ADDRESS_1.line2}
                     </span>
                   </div>
                 </li>
@@ -136,11 +236,11 @@ export default function ContactSectionOne() {
                     </svg>
                   </span>
                   <div className={styles.officeDetails}>
-                    <span className={styles.officeName}>London</span>
+                    <span className={styles.officeName}>{ADDRESS_2.label}</span>
                     <span className={styles.officeAddress}>
-                      45 Innovation Way, Shoreditch
+                      {ADDRESS_2.line1}
                       <br />
-                      London, EC2A 4NE
+                      {ADDRESS_2.line2}
                     </span>
                   </div>
                 </li>
@@ -150,7 +250,7 @@ export default function ContactSectionOne() {
             {/* Direct Contact card */}
             <div className={styles.card}>
               <p className={styles.directContactLabel}>Direct Contact</p>
-              <p className={styles.contactEmail}>support@example.com</p>
+              <p className={styles.contactEmail}>{CONTACT_EMAIL}</p>
               <div className={styles.socialRow}>
                 {/* Globe / website */}
                 <a
