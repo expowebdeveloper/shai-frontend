@@ -56,6 +56,19 @@
   @apply h-[110px] resize-none;
 }
 
+/* Validation states */
+.inputError {
+  @apply border-red-400 focus:border-red-400 focus:ring-red-400/15;
+}
+
+.errorText {
+  @apply mt-1 text-[11px] font-medium text-red-500;
+}
+
+.successMessage {
+  @apply mb-5 rounded-md bg-emerald-50 px-4 py-3 text-[12px] font-semibold text-emerald-700 border border-emerald-200;
+}
+
 .submitButton {
   @apply mt-6 w-full rounded-md bg-[#7040dc] py-3.5 text-[13px] font-extrabold tracking-normal text-white shadow-[0_14px_28px_rgba(112,64,220,0.22)] transition-all hover:bg-[#6235cf] hover:shadow-[0_18px_36px_rgba(112,64,220,0.3)];
 }
